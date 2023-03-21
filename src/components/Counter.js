@@ -24,13 +24,20 @@ export const Counter = () => {
         cols="30"
         rows="10"
         placeholder="Type or paste your text"
+        data-testid="textArea"
         value={userInput}
         onChange={handleInput}
       ></textarea>
-      <button onClick={handleClear}>Clear</button>
+      <button
+        data-testid="clearBtn"
+        disabled={userInput.length < 1}
+        onClick={handleClear}
+      >
+        Clear
+      </button>
       <div className="result">
-        <span>Character: {userInput.length}</span>
-        <span>Word: {words.length}</span>
+        <span data-testid="charLength">Character: {userInput.length}</span>
+        <span data-testid="wordLength">Word: {words.length}</span>
       </div>
     </div>
   );

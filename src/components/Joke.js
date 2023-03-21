@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export const Joke = () => {
   const [joke, setJoke] = useState({});
@@ -21,16 +20,8 @@ export const Joke = () => {
 
   return (
     <div className="joke">
-      <p>
-        {joke.joke} -{" "}
-        <Link
-          to="https://icanhazdadjoke.com"
-          target={"_blank"}
-          referrerPolicy="no-referrer"
-        >
-          icanhazdadjoke.com
-        </Link>
-      </p>
+      <p data-testid="punchline">{joke.joke}</p>
+      <span>- icanhazdadjoke.com</span>
     </div>
   );
 };
