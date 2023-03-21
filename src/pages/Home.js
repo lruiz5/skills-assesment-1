@@ -1,6 +1,8 @@
 import { Header, Counter } from "../components";
+import { useTitle } from "../hooks/useTitle";
 
 export const Home = () => {
+  useTitle("Word Counter");
   return (
     <>
       <Header

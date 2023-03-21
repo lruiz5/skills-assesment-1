@@ -1,6 +1,8 @@
 import { Header, Joke } from "../components";
+import { useTitle } from "../hooks/useTitle";
 
 export const Jokes = () => {
+  useTitle("Jokes");
   return (
     <>
       <Header
