@@ -7,9 +7,11 @@ export const NotFound = () => {
   return (
     <div className="pnf">
       <div className="oops">
-        <p>Oops - Page Not Found!</p>
+        <p data-testid="oopsHeading">Oops - Page Not Found!</p>
         <img src={PNF} alt="Oops" />
-        <button onClick={() => navigate("/")}>Back To Word Counter</button>
+        <button data-testid="returnToHome" onClick={() => navigate("/")}>
+          Back To Word Counter
+        </button>
       </div>
     </div>
   );
